@@ -46,3 +46,22 @@ public class Pencarian {
     // todo access posting
   }
 }
+
+public class Posting {
+  private String judul;
+  private String tanggal;
+  private String namaAdmin;
+}
+
+public class Makanan extends Posting {
+  private int perhitunganGizi;
+}
+
+public class Olahraga extends Posting {
+  private int videoUrl;
+}
+
+public class Feedback {
+  private String pesan;
+}
+}
