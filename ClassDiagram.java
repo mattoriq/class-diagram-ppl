@@ -138,7 +138,7 @@ public class Makanan extends Posting {
 }
 
 public class Olahraga extends Posting {
-	private int videoUrl;
+	private String videoUrl;
 	public Olahraga(String videoUrl){
 		this.videoUrl = videoUrl;
 	}
