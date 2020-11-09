@@ -69,13 +69,12 @@ public class Admin extends Personal {
 			System.out.println("Belum ada post baru yang dapat diedit.");
 		}
 	}
-}
-  
-public void readFeedback(){
-	if (newFeedback != null){
-		System.out.println("Feedback mengenai aplikasi tertulis di bawah ini\n" + newFeedback.getPesan());
-	} else {
-		System.out.println("Belum ditemukan feedback dari aplikasi ini.");
+	public void readFeedback(){
+		if (newFeedback != null){
+			System.out.println("Feedback mengenai aplikasi tertulis di bawah ini\n" + newFeedback.getPesan());
+		} else {
+			System.out.println("Belum ditemukan feedback dari aplikasi ini.");
+		}
 	}
 }
 
