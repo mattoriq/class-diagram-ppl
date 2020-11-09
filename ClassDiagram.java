@@ -70,7 +70,7 @@ public class Admin extends Personal {
 				newPost.changeNamaAdmin(newNamaAdmin);
 			}
 		} else {
-			System.out.println("Belum ada post baru yang dapat diedit.");
+			System.out.println("Input Salah.");
 		}
 	}
 	public void readFeedback(){
