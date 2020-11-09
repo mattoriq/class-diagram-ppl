@@ -50,17 +50,21 @@ public class Admin extends Personal {
 	}
 	public void editPosting(){
 		if (newPost != null){
-			System.out.println("Anda ingin mengedit: 1) JUDUL 2) TANGGAL 3) NAMA ADMIN");
+			System.out.println("Anda ingin mengedit: 1) JUDUL 2) ISI 3) TANGGAL 4) NAMA ADMIN");
 			int choice = getInt();
 			if (choice == 1){
 				System.out.println("Judul baru: ");
 				String newJudul = getString();
 				newPost.changeJudul(newJudul);
 			} else if (choice == 2) {
+				System.out.println("Isi baru: ");
+				String newIsi = getIsi();
+				newPost.changeIsi(newIsi);
+			} else if (choice == 3) {
 				System.out.println("Tanggal baru: ");
 				String newTanggal = getString();
 				newPost.changeTanggal(newTanggal);
-			} else if (choice == 3) {
+			} else if (choice == 4) {
 				System.out.println("Nama Admin baru: ");
 				String newNamaAdmin = getString();
 				newPost.changeNamaAdmin(newNamaAdmin);
@@ -87,15 +91,20 @@ public class Pencarian {
 
 public class Posting {
 	private String judul;
+	private String isi;
 	private String tanggal;
 	private String namaAdmin;
-	public Posting(String judul, String tanggal, String namaAdmin){
+	public Posting(String judul, String isi, String tanggal, String namaAdmin){
 		this.judul = judul;
+		this.isi = isi
 		this.tanggal = tanggal;
 		this.namaAdmin = namaAdmin;
 	}
 	public void getJudul(){
 		return this.judul;
+	}
+	public void getIsi(){
+		return this.isi;
 	}
 	public void getTanggal(){
 		return this.tanggal;
@@ -105,6 +114,10 @@ public class Posting {
 	}
 	public changeJudul(String newJudul){
 		this.judul = newJudul;
+		return true;
+	}
+	public changeIsi(String newIsi){
+		this.isi = newIsi;
 		return true;
 	}
 	public changeTanggal(String newTanggal){
